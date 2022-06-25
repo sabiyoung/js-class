@@ -1,154 +1,141 @@
-let result= document.getElementById("myDiv");
-
-//  let isCorrect = confirm("Is it correct?");
-//  result.innerHTML= `isCorrect = ${isCorrect}<br/>`;
-
-//  if(isCorrect){
-//    result.innerHTML+= "that is correct!!!";
-//  }
-//  else{
-//     result.innerHTML+= "that is NOT correct!!!";
-//  }
-
-//  let myResponse = prompt("1+1?");
-//  result.innerHTML= `1+1=${1+1}?  ${myResponse} <br/>`;
-// result.innerHTML+= `myResponse type is  ${typeof myResponse }<br/>`;
-
-//  if(+myResponse ===  (1+1) ){
-//    result.innerHTML+= "that is correct!!!";
-//  }
-//  else{
-//     result.innerHTML+= "that is NOT correct!!!";
-//  }
-
-//  result.innerHTML += `<p>Truthy and Falsy</p>`;
-//   result.innerHTML += `<p>Falsy = <br>
-//   - False,<br>
-//   - 0,<br>
-//   - Empty string (""),<br>
-//   - Null,<br>
-//   - Undefined,<br>
-//   - NaN</p>`;
-
-// let myVar = "3";
-// let somethingElse= 3;
-//  if( myVar=== somethingElse ){
-//    result.innerHTML+= "that is true!!!";
-//  }
-//  else{
-//     result.innerHTML+= "that is false!!!";
-//  }
+// // let result= document.getElementById("myDiv");
 
 
-// result.innerHTML += `<p>null = ${(null?"true":"false")} </p>`;
-// result.innerHTML += `<p>0 = ${(0?"true":"false")} </p>`;
-// result.innerHTML += `<p>"" = ${(""?"true":"false")} </p>`;
-// result.innerHTML += `<p>Undefined = ${(undefined?"true":"false")} </p>`;
-// result.innerHTML += `<p>NaN = ${(NaN?"true":"false")} </p>`;
+// // // function dailyChallenge() {
+// // //     // const number1 = prompt("Enter a number");
+// // //     // const number2 = prompt("Enter another number");
+// // //     // const convertedNumber1 = parseInt(number1);
+// // //     // const convertedNumber2 = parseInt(number2);
 
-// result.innerHTML += `<p>Truthy = All other values</p>`;
-// result.innerHTML += `<p>" " = ${(" "?"true":"false")} </p>`;
-// result.innerHTML += `<p>"0" = ${("0"?"true":"false")} </p>`;
+// // //     const input = prompt("Enter two number separated by a ,")
+// // //     const inputArr = input.split(',')
+// // //     const convertedNumber1 = parseInt(inputArr[0])
+// // //     const convertedNumber2 = parseInt(inputArr[1])
+// // //     console.log(inputArr);
 
-// result.innerHTML += `<p>Logical Operators</p>`;
-//   result.innerHTML += `<p>
-//   - &&  = and <br>
-//   - ||  = or<br>
-//   - !   = not</p>`;
-// "not false" is equal to "true"
-//  result.innerHTML += `<p>Comparison Operator</p>`;
-//  result.innerHTML += `<p>=== strict equal</p>`;
-//  result.innerHTML += `<p>1===1 = ${1===1} ---- 2===1 = ${2===1}</p>`;
-//  result.innerHTML += `<hr />`;
-//  result.innerHTML += `<p>!== strict not equal</p>`;
-//  result.innerHTML += `<p>1!==1 = ${1!==1} ---- 2!==1 = ${2!==1}</p>`;
-//  result.innerHTML += `<hr />`;
-//  result.innerHTML += `<p>> greater than</p>`;
-//  result.innerHTML += `<p>1>1 = ${1>1} ---- 1>0 = ${1>0}</p>`;
-//  result.innerHTML += `<hr />`;
-//  result.innerHTML += `<p> >= greater than or equal</p>`;
-//  result.innerHTML += `<p>1>=1 = ${1>=1} ---- 0>=1 = ${0>=1}</p>`;
-//  result.innerHTML += `<hr />`;
-//  result.innerHTML += `<p> < less than</p>`;
-//  result.innerHTML += `<p>0<1 = ${0<1} ---- 1<0 = ${1<0}</p>`;
-//  result.innerHTML += `<hr />`;
-//  result.innerHTML += `<p> <= less than or equal</p>`;
-//  result.innerHTML += `<p>1<=1 = ${1>=1} ---- 1<=0 = ${1<=0}</p>`;
+// //     if (convertedNumber1 > convertedNumber2) {
+// //         alert(`${convertedNumber1} is greater than ${convertedNumber2}`)
+// //     } else {
+// //         alert(`${convertedNumber2} is greater than ${convertedNumber1}`)
+// //     }
 
-// result.innerHTML += `<p>1<=1 && 0<=1 = ${1>=1 && 0<=1} </p>`;
+// // //    let result = convertedNumber1 > convertedNumber2 ?  `${convertedNumber1} is greater than ${convertedNumber2}`  :  `${convertedNumber2} is greater than ${convertedNumber1}`;
+// // //  alert(result);
+
+// // //     // This is an example do not recommend it.
+// // //     // alert(`${convertedNumber1 > convertedNumber2 ? convertedNumber1 : convertedNumber2} is greater`)
+
+// // // }
+// // // dailyChallenge();
+
+// // function splitPromptResponse(){
+// //   return input.split(',');
+// // }
+// // let anotherVariable="this is a global scope";
+
+// // function myFunction() {
+// //   const convertToNumber=(anotherVariable)=>{
+// //     console.log("convertToNumber => local Scope 2")
+// //      return parseInt(anotherVariable)
+// //   }
+// //       console.log("convertToNumber => local Scope 1")
+
+// //    const anotherVariable = splitPromptResponse(); //input.split(',')
+
+// //    const convertedNumber1 = convertToNumber(anotherVariable[0])
+// //    const convertedNumber2 = convertToNumber(anotherVariable[1])
 
 
-// let a="Flavio";
+// //    let result = convertedNumber1 > convertedNumber2 ?  `${convertedNumber1} is greater than ${convertedNumber2}`  :  `${convertedNumber2} is greater than ${convertedNumber1}`;
+// //    alert(result);
 
+// // }
 
-// switch (a) {
-//     case "1096":
-//     case "1095":
-//         result.innerHTML +="<p>form 1095</p>" ;
-//         break;
-//     case "1099":
-//         result.innerHTML +="<p>form 1099</p>" ;
-//         break
-//     default:
-//         result.innerHTML +=`<p>form w2</p>`;
+// function convertToNumber(param1){
+//     console.log("convertToNumber => global Scope")
+//   return parseInt(param1)
 // }
+// // let ThisIsAlsoGlobalVariable=0;
+// // let thisIsGlobalVariable=0;
+//  let y=0;
 
-//  if( a==="1095" || a==="1096" ){
-//      result.innerHTML +="<p>form 1095</p>" ;
+// // const convertToNumber=(x)=>{
+// //   // y=parseInt(x);
+// //    return parseInt(x);
+// // }
+// // console.log(y)
+// // y= convertToNumber("10")
+// // console.log(y)
+
+// //   const input = prompt("Out the function -  Enter two number separated by a ,")
+// //   myFunction();
+
+// // // const myObject = {
+// // //   convertToNumber:(param1)=>{
+// // //     return parseInt(param1)
+// // //   }
+// // // }
+// // // console.log("myObject",myObject.convertToNumber("30"))
+
+// // // const myObject= [1,2,3,4,5,6];
+
+// // // const mystring="test";
+// // // mystring.length
+
+
+// // // const convertToNumber=(t,x = "2")=>{
+// // //    return parseInt(x)%t;
+// // // }
+// // // let z="3";
+// // // console.log(y);
+// // // y= convertToNumber(z,"20");
+// // // console.log(y);
+
+// function concatName(firstName, middleName, lastName) {
+//   return firstName + ' ' + middleName + ' ' + lastName;
+// }
+// let concatGWC = concatName('George', 'Washington', 'Carver');
+// // console.log(concatGWC)
+// // console.log(concatGWC.length)
+//  console.log(concatGWC.split(' '))
+//   let newArray=concatGWC.split(' ')
+//  newArray.forEach((item)=> console.log(item,item.length))
+
+//  for(let index=0; index<newArray.length; index++)
+// {
+//   console.log("for", newArray[index],newArray[index].length)
+// }
+// console.log(concatGWC.toLowerCase())
+
+// console.log(concatGWC.toUpperCase())
+// concatGWC=concatGWC.toUpperCase()
+// console.log(concatGWC)
+
+// function otherFunc(newArray) {
+//   let ret="";
+//   newArray.forEach((element,index) => {
+//     console.log(index%2,index)
+//     ret+=(index%2? element.toUpperCase(): element.toLowerCase())+" ";
+//   });
+//   return ret;
+// }
+// console.log(otherFunc(newArray))
+// newArray.toString()
+
+//  if(1>2) {
+//    console.log("error");
 //  }
-//  else if( a==="1099" ){
-//      result.innerHTML +="<p>form 1099</p>" ;
-//  }
-//  else{
-//       result.innerHTML +=`<p>form w2</p>`;
-//  }
 
-
-// Ternary Operator:  expression ? true : false;
-// let a="w2";
-// result.innerHTML += `<p>form  ${ (a==="w2" ? "w2" : "not valid") } </p>`;
-// let b= (a==="w2" ? 2 : 0);
-// result.innerHTML += `<p>form  ${ b } </p>`;
-// result.innerHTML += `<p>b=  ${ ++b } </p>`;
-
-result.innerHTML += `<h2>Daily challenge solution</h2>`;
-
-
-
-try{
-      const num1 = prompt("Enter a number", 100);
-      result.innerHTML += `<p>num1 = ${num1}</p>`;
-      console.log("num1",num1, typeof num1);
-     let parsedNum1 = +num1; // parseInt(num1); // +num1;
-    console.log("parsedNum1",parsedNum1, typeof parsedNum1);
-    if(isNaN(parsedNum1)){
-        throw " Num1 is not a number ";
-    }
-    const num2 = prompt("Enter another number", 200);
-    result.innerHTML += `<p>num2 = ${num2}</p>`;
-    let parsedNum2 = parseInt(num2); // +num2;
-    console.log("num2",num2, typeof num2) ;
-    console.log("parsedNum2",parsedNum2, typeof parsedNum2);
-    if(isNaN(parsedNum2)){
-      throw " Num2 is not a number ";
-    }
-    let num3=+parsedNum1/+parsedNum2;
-   console.log("parsedNum1/+parsedNum2 = ",parsedNum1/+parsedNum2);
-   console.log("num3",num3, typeof num3);
-     if(parsedNum1=parsedNum2) {
-       result.innerHTML += "<p>num1 is greater than num2</p>";
-    }
-    else if (parsedNum1<parsedNum2){
-        result.innerHTML += "<p>num2 is greater than num1</p>";
-    }
-    else{
-        result.innerHTML += "<p>num1 and num2 are equal</p>";
-    }
-}
-catch(err){
-     result.innerHTML +=`<p>Error: ${err}</p>` ;
-}
-// if(parsedNum1===parsedNum2 || parsedNum1!==parsedNum2 || parsedNum1!==parsedNum2) { }
-// if(parsedNum1===parsedNum2 && parsedNum1!==parsedNum2 && parsedNum1!==parsedNum2) { }
-
-
+// let checkPassword = ""
+function myPassword(checkPassword){
+   if (checkPassword.length <6 ){
+   console.log("too short")
+   } else if (checkPassword.length > 20) {
+ console.log("too long")
+ } else if (checkPassword[0] ) {
+   console.log("too long")
+   } else {
+     console.log("you are good")
+   }
+ }
+ myPassword(12334567)
