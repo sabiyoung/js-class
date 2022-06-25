@@ -1,141 +1,194 @@
-// // let result= document.getElementById("myDiv");
+let result= document.getElementById("myDiv");
 
-
-// // // function dailyChallenge() {
-// // //     // const number1 = prompt("Enter a number");
-// // //     // const number2 = prompt("Enter another number");
-// // //     // const convertedNumber1 = parseInt(number1);
-// // //     // const convertedNumber2 = parseInt(number2);
-
-// // //     const input = prompt("Enter two number separated by a ,")
-// // //     const inputArr = input.split(',')
-// // //     const convertedNumber1 = parseInt(inputArr[0])
-// // //     const convertedNumber2 = parseInt(inputArr[1])
-// // //     console.log(inputArr);
-
-// //     if (convertedNumber1 > convertedNumber2) {
-// //         alert(`${convertedNumber1} is greater than ${convertedNumber2}`)
-// //     } else {
-// //         alert(`${convertedNumber2} is greater than ${convertedNumber1}`)
-// //     }
-
-// // //    let result = convertedNumber1 > convertedNumber2 ?  `${convertedNumber1} is greater than ${convertedNumber2}`  :  `${convertedNumber2} is greater than ${convertedNumber1}`;
-// // //  alert(result);
-
-// // //     // This is an example do not recommend it.
-// // //     // alert(`${convertedNumber1 > convertedNumber2 ? convertedNumber1 : convertedNumber2} is greater`)
-
-// // // }
-// // // dailyChallenge();
-
-// // function splitPromptResponse(){
-// //   return input.split(',');
-// // }
-// // let anotherVariable="this is a global scope";
-
-// // function myFunction() {
-// //   const convertToNumber=(anotherVariable)=>{
-// //     console.log("convertToNumber => local Scope 2")
-// //      return parseInt(anotherVariable)
+// Day 5 Home challenge solution
+// const checkPassword = ()=>{
+//   let myPw = document.getElementById('my-Password');
+//   // let myPw = myPassword;
+//   let myPwConf = document.getElementById('myPasswordConfirm').value;
+//   if(myPw.value !== myPwConf ) {
+//     returnMessage('Password are not equal');
+//     myPw.focus();
+//   }
+//   else if(myPw.value.length<6){
+//     returnMessage('Password are too short');
+//     myPw.focus();
+//   }
+//   else if( myPw.value.length>=20 ){
+//     returnMessage('Password are too long');
+//     myPw.focus();
+//   }
+//   else if( +myPw.value[0]<10 ){
+//     returnMessage('Password can not start with number');
+//     myPw.focus();
+//   }
+//   else{
+//        returnMessage('Password are approved');
+//   }
+// }
+// // const checkPasswordV2 = ()=>{
+// //   let myPw = document.getElementById('myPassword');
+// //   let myPwConf = document.getElementById('myPasswordConfirm').value;
+// //   if(myPw.value !==myPwConf ) {
+// //     returnMessage('Password are not equal');
 // //   }
-// //       console.log("convertToNumber => local Scope 1")
-
-// //    const anotherVariable = splitPromptResponse(); //input.split(',')
-
-// //    const convertedNumber1 = convertToNumber(anotherVariable[0])
-// //    const convertedNumber2 = convertToNumber(anotherVariable[1])
-
-
-// //    let result = convertedNumber1 > convertedNumber2 ?  `${convertedNumber1} is greater than ${convertedNumber2}`  :  `${convertedNumber2} is greater than ${convertedNumber1}`;
-// //    alert(result);
-
+// //   else if(myPw.value.length<6){
+// //     returnMessage('Password are too short');
+// //   }
+// //   else if( myPw.value.length>=20 ){
+// //     returnMessage('Password are too long');
+// //   }
+// //   else if( +myPw.value[0]<10 ){
+// //     returnMessage('Password can not start with number');
+// //   }
+// //   else{
+// //     returnMessage('Password are approved');
+// //   }
 // // }
 
-// function convertToNumber(param1){
-//     console.log("convertToNumber => global Scope")
-//   return parseInt(param1)
+// const returnMessage = (message)=> {
+//     result.innerHTML = message;
+//    // myPw.focus();
 // }
-// // let ThisIsAlsoGlobalVariable=0;
-// // let thisIsGlobalVariable=0;
-//  let y=0;
 
-// // const convertToNumber=(x)=>{
-// //   // y=parseInt(x);
-// //    return parseInt(x);
+
+
+// Day 6
+// Promise
+// const resolveOrReject = (resolve, reject) => {
+//   setTimeout(() => {
+//     let num=Math.random();
+//     if(num>0.5){
+//       resolve(`Task complete (${num})`);
+//     }
+//     else{
+//       reject(`Task fail (${num})`);
+//     }
+//   }, 300);
+// }
+// const myPromise1 = new Promise(resolveOrReject);
+
+const myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    let num=Math.random();
+    if(num>0.5){
+      resolve(`Promise resolve (${num})`);
+    }
+    else{
+      reject(`Promise reject (${num})`);
+    }
+  }, 300);
+});
+
+myPromise.then((response)=>{
+  result.innerHTML += "response = "+response;
+}).catch((err)=> {
+  result.innerHTML += "err = "+err;
+}).finally(( )=>{
+  result.innerHTML += "<br>We done with this promise";
+});
+
+// myPromise.all();
+
+
+
+ // Async
+
+//  async function firstAsync(num) {
+
+//      // let num=Math.random();
+//       if(num>0.5){
+//         return `Task complete (${num})` ;
+//       }
+//       else{
+//         return `Task fail (${num})` ;
+//       }
+// }
+// // firstAsync(.4).then(alert);
+
+// // async function firstAwait(called) {
+// //     let promise = new Promise((res, rej) => {
+// //        let waitFewSeconds=Math.random()*10000;
+// //        console.log(`waitFewSeconds (${called})`,waitFewSeconds)
+// //        setTimeout(() => {
+// //          res(firstAsync(waitFewSeconds))
+// //        }, waitFewSeconds)
+// //     });
+
+// //     // wait until the promise returns us a value
+// //     let promiseResult = await promise;
+
+// //     // "Now it's done!"
+// //     result.innerHTML +=`<br> (${called}) ${promiseResult}`;
+
+// // };
+
+// // firstAwait(1);
+// // firstAwait(2);
+
+
+// // try {
+// // console.log("Success 1");
+// // console.log("Success 2");
+// // console.log("Success 3");
 // // }
-// // console.log(y)
-// // y= convertToNumber("10")
-// // console.log(y)
+// // catch(err){
+// // console.log("ERROR:", err)
+// // }
 
-// //   const input = prompt("Out the function -  Enter two number separated by a ,")
-// //   myFunction();
-
-// // // const myObject = {
-// // //   convertToNumber:(param1)=>{
-// // //     return parseInt(param1)
-// // //   }
-// // // }
-// // // console.log("myObject",myObject.convertToNumber("30"))
-
-// // // const myObject= [1,2,3,4,5,6];
-
-// // // const mystring="test";
-// // // mystring.length
-
-
-// // // const convertToNumber=(t,x = "2")=>{
-// // //    return parseInt(x)%t;
-// // // }
-// // // let z="3";
-// // // console.log(y);
-// // // y= convertToNumber(z,"20");
-// // // console.log(y);
-
-// function concatName(firstName, middleName, lastName) {
-//   return firstName + ' ' + middleName + ' ' + lastName;
-// }
-// let concatGWC = concatName('George', 'Washington', 'Carver');
-// // console.log(concatGWC)
-// // console.log(concatGWC.length)
-//  console.log(concatGWC.split(' '))
-//   let newArray=concatGWC.split(' ')
-//  newArray.forEach((item)=> console.log(item,item.length))
-
-//  for(let index=0; index<newArray.length; index++)
+// const firstName = ["Flavio", "Adam","Leila"];
+// const lastName = ["Sampaio","Du","Radtke"];
+// const myJsonObjArr = [{
+//     firstName:"Flavio",
+//     lastName:"Sampaio"
+// },
 // {
-//   console.log("for", newArray[index],newArray[index].length)
+//     firstName:"Adam",
+//     lastName:"Du"
+// },{
+//     firstName:"Leila",
+//     lastName:"Radtke"
 // }
-// console.log(concatGWC.toLowerCase())
+// ];
+// const myJsonObj =  {
+//     firstName:"Flavio",
+//     lastName:"Sampaio"
+// };
+// let index=0;
+// const rev=myJsonObjArr.reverse();
+// // result.innerHTML = rev[index].firstName
+// // result.innerHTML +=" "
 
-// console.log(concatGWC.toUpperCase())
-// concatGWC=concatGWC.toUpperCase()
-// console.log(concatGWC)
-
-// function otherFunc(newArray) {
-//   let ret="";
-//   newArray.forEach((element,index) => {
-//     console.log(index%2,index)
-//     ret+=(index%2? element.toUpperCase(): element.toLowerCase())+" ";
-//   });
-//   return ret;
+// // result.innerHTML += rev[index].lastName
+// const otherJson={
+// "employees":[
+//     {"firstName":"John", "lastName":"Doe"},
+//     {"firstName":"Anna", "lastName":"Smith"},
+//     {"firstName":"Peter", "lastName":"Jones"}
+// ],
+// "employeeOfTheMonth":{"firstName":"John", "lastName":"Doe"}
 // }
-// console.log(otherFunc(newArray))
-// newArray.toString()
+// console.log(  otherJson );
+// console.log( JSON.stringify(otherJson));
+// result.innerHTML +=   JSON.stringify(otherJson);
 
-//  if(1>2) {
-//    console.log("error");
-//  }
+// console.log( JSON.parse(result.innerHTML));
 
-// let checkPassword = ""
-function myPassword(checkPassword){
-   if (checkPassword.length <6 ){
-   console.log("too short")
-   } else if (checkPassword.length > 20) {
- console.log("too long")
- } else if (checkPassword[0] ) {
-   console.log("too long")
-   } else {
-     console.log("you are good")
-   }
- }
- myPassword(12334567)
+fetch
+let index=2;
+(async () => {
+    // GET request using fetch with async/await
+    const response = await fetch('https://reqres.in/api/users');
+    const responseData = await response.json();
+    console.log("responseData",responseData);
+     console.log("response",response);
+     console.log("typeof response = ",typeof response);
+     console.log("JSON.stringify()",JSON.stringify(responseData.data[index]));
+//    // console.log("JSON.parse()",JSON.parse( '{"name":"Flavio"}'));
+     result.innerHTML = `${responseData.data[index].first_name} ${responseData.data[0].last_name} <br>`;
+    // result.innerHTML +=   JSON.stringify(responseData.data[index])+"<br>";
+ //    result.innerHTML +=    responseData.data[0] +"<br>";
+//    // result.innerHTML +=   JSON.parse( '{"name":"Flavio"}').name;
+      let avatar= document.getElementById("image");
+     avatar.src=responseData.data[index].avatar;
+
+})();
