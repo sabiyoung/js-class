@@ -1,194 +1,242 @@
-let result= document.getElementById("myDiv");
+const result = document.getElementById("myDiv");
 
-// Day 5 Home challenge solution
-// const checkPassword = ()=>{
-//   let myPw = document.getElementById('my-Password');
-//   // let myPw = myPassword;
-//   let myPwConf = document.getElementById('myPasswordConfirm').value;
-//   if(myPw.value !== myPwConf ) {
-//     returnMessage('Password are not equal');
-//     myPw.focus();
-//   }
-//   else if(myPw.value.length<6){
-//     returnMessage('Password are too short');
-//     myPw.focus();
-//   }
-//   else if( myPw.value.length>=20 ){
-//     returnMessage('Password are too long');
-//     myPw.focus();
-//   }
-//   else if( +myPw.value[0]<10 ){
-//     returnMessage('Password can not start with number');
-//     myPw.focus();
-//   }
-//   else{
-//        returnMessage('Password are approved');
-//   }
+// Day 6 Home challenge solution
+// solution 1
+// (async ()=>{
+//     const response = await fetch('https://cat-fact.herokuapp.com/facts');
+//     const responseArray = await response.json();
+//     console.log("responseArray",responseArray);
+//     const fact= Math.round( Math.random()*responseArray.length);
+//     result.innerHTML +=`Fact ${fact} -> ${responseArray[fact].text} <br>`;
+// })();
+
+// // solution 2
+// fetch('https://cat-fact.herokuapp.com/facts')
+//    .then((response)=>{
+//         response.json()
+//                 .then((responseArray) =>{
+//                      console.log("responseArray",responseArray);
+//                      const fact= Math.trunc( Math.random()*responseArray.length);
+//                      result.innerHTML +=`Fact ${fact} -> ${responseArray[fact].text} <br>`;
+//                 });
+//    });
+
+
+// solution 3
+// fetch('https://cat-fact.herokuapp.com/facts')
+//      .then(callback1);
+
+// function callback1(response){
+//     response.json()
+//             .then(callback2)
+//             .catch((err)=>  console.log("Json Error->",err) );
 // }
-// // const checkPasswordV2 = ()=>{
-// //   let myPw = document.getElementById('myPassword');
-// //   let myPwConf = document.getElementById('myPasswordConfirm').value;
-// //   if(myPw.value !==myPwConf ) {
-// //     returnMessage('Password are not equal');
-// //   }
-// //   else if(myPw.value.length<6){
-// //     returnMessage('Password are too short');
-// //   }
-// //   else if( myPw.value.length>=20 ){
-// //     returnMessage('Password are too long');
-// //   }
-// //   else if( +myPw.value[0]<10 ){
-// //     returnMessage('Password can not start with number');
-// //   }
-// //   else{
-// //     returnMessage('Password are approved');
-// //   }
-// // }
-
-// const returnMessage = (message)=> {
-//     result.innerHTML = message;
-//    // myPw.focus();
+// function callback2(responseArray)  {
+//     console.log("responseArray",responseArray);
+//     let nextRandom = Math.random();
+//     let fact= Math.round( nextRandom*responseArray.length);
+//     console.log("fact",fact);
+//     if (fact>4) fact = responseArray.length-1;
+//     if(fact<0) fact=0;
+//     result.innerHTML +=`Fact ${fact} -> ${responseArray[fact].text}<br>`;
 // }
 
 
+// Day 7
 
-// Day 6
-// Promise
-// const resolveOrReject = (resolve, reject) => {
-//   setTimeout(() => {
-//     let num=Math.random();
-//     if(num>0.5){
-//       resolve(`Task complete (${num})`);
+// Array
+
+// let myArray = [1,"2",3,4,5,6,7,88,9,100];
+// result.innerHTML += `const myArray = [${ myArray.concat()}] <br>`;
+// result.innerHTML += `const myArray = [${ myArray.join('-')}] <br>`;
+
+// result.innerHTML += `length= ${ myArray.length} <br>`;
+
+// myArray.push('Flavio');
+// result.innerHTML += `const myArray = [${ myArray.concat()}] <br>`;
+// result.innerHTML +=` - after push length =  ${ myArray.length} <br>`;
+// myArray.pop();
+// myArray.shift("Sebastian")
+// myArray.unshift("Sebastian")
+// console.log(myArray);
+// result.innerHTML +=` - after pop length =  ${ myArray.length} <br>`;
+// let newArray = myArray.concat(["orange","lime","apple","grape"]);
+// result.innerHTML +=` - after concat() =  ${ newArray} <br>`;
+
+// result.innerHTML +=` - after .indexOf('apple') =  ${ newArray.indexOf('apple')} <br>`;
+// result.innerHTML +=` - after .slice(10, 12) =  ${ newArray.slice(10, 12)} <br>`;
+// console.log(newArray);
+// result.innerHTML +=` - after .splice(10, -3) =  ${ newArray.splice(10, 3)} <br>`;
+// console.log(newArray);
+
+// Loops
+// myArray = [1,"2",3,4,5,6,7,88,9,100];
+
+// for(let i = 0; i < 10; i++) {
+//   result.innerHTML +=`myArray[${i}] = ${myArray[i]}<br>`;
+// }
+//console.log(myArray)
+// for(const key in myArray) {
+//   result.innerHTML +=`key =  ${ key} -> value = ${myArray[ key]}<br>`;
+// }
+// for(const value of myArray) {
+//   result.innerHTML +=`value =  ${ value}  <br>`;
+// }
+// let sandwich = {
+//   grilled: true,
+//   butter: "lots",
+//   bread: "whole wheat",
+//   calories: 250
+// }
+// console.log(sandwich)
+// result.innerHTML +=`sandwich.butter =   ${ sandwich.butter}<br>`;
+// result.innerHTML +=`sandwich['butter'] =  ${ sandwich['butter']}<br>`;
+// for(const key in sandwich) {
+//   result.innerHTML +=`key =  ${ key} --- `;
+//   result.innerHTML +=`value =  ${ sandwich[key]} <br>`;
+// }
+// myArray = [1,"2",true,4,sandwich,6,"7",8,9,10];
+
+// myArray.forEach((v,k)=>{
+//     result.innerHTML +=`v =  ${ v} -> k = ${ k }<br>`;
+// });
+
+// myArray = [1,"2",true,4,sandwich,6,"7",8,9,10];
+// let newMapArray = myArray.map((value)=>{
+//   console.log  (value)
+//    return typeof value;
+// })
+// result.innerHTML += newMapArray;
+// console.log("newMapArray",newMapArray)
+
+// While Loop
+
+// for(let i = 0; i < 10; i++) {
+//    result.innerHTML +=`for -> i =  ${ i} <br>`;
+// }
+// let i=0;
+// while  (i<10) {
+//      result.innerHTML +=`while -> i =  ${ i++} <br>`;
+// }
+// i=0;
+// do {
+//   result.innerHTML +=`do -> i =  ${ i} <br>`;
+// } while (++i<10);
+// result.innerHTML +=`after do -> i =  ${ i} <br>`;
+
+// // Daily Challenge solution
+// const FizzBuzz=()=>{
+// for (let i = 1; i <= 100; i++) {
+//     // if (i % 3 === 0 && i % 5 === 0) {
+//     //    result.innerHTML +=`FizzBuzz <br>`;
+//     // }
+//     // else if (i % 3 === 0) {
+//     //    result.innerHTML +=`Fizz <br>`;
+//     // }
+//     // else if (i % 5 === 0) {
+//     //    result.innerHTML +=`Buzz <br>`;
+//     // }
+//     // else{
+//     //    result.innerHTML +=`${i}<br>`;
+//     // }
+//       result.innerHTML +=`<br>`;
+//       if (i % 3 === 0 && i % 5 === 0) {
+//         result.innerHTML +=`FizzBuzz <br>`;
+//         break;
+//       }
+//     if (i % 3 === 0) {
+//        result.innerHTML +=`Fizz`;
+//        continue;
+//     }
+//     if (i % 5 === 0) {
+//        result.innerHTML +=`Buzz`;
+//        continue;
+//     }
+//     result.innerHTML +=`${i}<br>`;
+// }
+// }
+// FizzBuzz();
+//  result.innerHTML +=`Out the loop<br>`;
+
+
+// DOM
+// let result= document.getElementById("myDiv");
+// result.innerHTML +=`Hello DOM<br>`;
+// result.innerHTML += `${result.attributes.length}<br>`;
+// for (let i = 0; i < result.attributes.length; i++) {
+//     result.innerHTML += result.attributes[i].name + " = " + result.attributes[i].value + "<br>";
+// }
+// console.log("result",result);
+
+// const ret= document.getElementsByTagName("input");
+// console.log(ret, ret.length)
+// for (const element of ret) {
+//     if(element.type==="text"){
+//         element.value="Bitwise"
 //     }
 //     else{
-//       reject(`Task fail (${num})`);
+//         element.value="Js"
 //     }
-//   }, 300);
 // }
-// const myPromise1 = new Promise(resolveOrReject);
 
-const myPromise = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    let num=Math.random();
-    if(num>0.5){
-      resolve(`Promise resolve (${num})`);
-    }
-    else{
-      reject(`Promise reject (${num})`);
-    }
-  }, 300);
-});
+// const retDiv= document.getElementsByTagName("div");
+// console.log(retDiv, retDiv.length)
+// for (const element of retDiv) {
+//      for (let elementStyle in element.style) {
+//        if(elementStyle=== "backgroundColor")
+//           element.style[elementStyle] = "green";
+//      }
+//      element.style.width="100px";
+//      element.style.height="100px";
 
-myPromise.then((response)=>{
-  result.innerHTML += "response = "+response;
-}).catch((err)=> {
-  result.innerHTML += "err = "+err;
-}).finally(( )=>{
-  result.innerHTML += "<br>We done with this promise";
-});
-
-// myPromise.all();
-
-
-
- // Async
-
-//  async function firstAsync(num) {
-
-//      // let num=Math.random();
-//       if(num>0.5){
-//         return `Task complete (${num})` ;
-//       }
-//       else{
-//         return `Task fail (${num})` ;
-//       }
 // }
-// // firstAsync(.4).then(alert);
 
-// // async function firstAwait(called) {
-// //     let promise = new Promise((res, rej) => {
-// //        let waitFewSeconds=Math.random()*10000;
-// //        console.log(`waitFewSeconds (${called})`,waitFewSeconds)
-// //        setTimeout(() => {
-// //          res(firstAsync(waitFewSeconds))
-// //        }, waitFewSeconds)
-// //     });
+// const para = document.createElement("p");
+// para.innerText = "This is a paragraph<br>";
+// document.body.appendChild(para);
+// const para2 = document.createElement("p");
+// para2.innerHTML = "<strong style='color:red'>This is a paragraph</strong>";
+// document.body.appendChild(para2);
+// myDivObj = document.getElementById("myDiv");
 
-// //     // wait until the promise returns us a value
-// //     let promiseResult = await promise;
+// const newButtonClick = ()=>{
+//    let newLabel = document.createElement("label");
+//    newLabel.innerText = "Button was clicked";
+//    newLabel.addEventListener('mouseover',eventMouseOver);
+//    newLabel.addEventListener('mouseout',()=>{
+//           newLabel.style["background-color"] = "white";
+//           newLabel.style["color"] = "black";
+//    newLabel.style["display"] = "none";
 
-// //     // "Now it's done!"
-// //     result.innerHTML +=`<br> (${called}) ${promiseResult}`;
-
-// // };
-
-// // firstAwait(1);
-// // firstAwait(2);
-
-
-// // try {
-// // console.log("Success 1");
-// // console.log("Success 2");
-// // console.log("Success 3");
-// // }
-// // catch(err){
-// // console.log("ERROR:", err)
-// // }
-
-// const firstName = ["Flavio", "Adam","Leila"];
-// const lastName = ["Sampaio","Du","Radtke"];
-// const myJsonObjArr = [{
-//     firstName:"Flavio",
-//     lastName:"Sampaio"
-// },
-// {
-//     firstName:"Adam",
-//     lastName:"Du"
-// },{
-//     firstName:"Leila",
-//     lastName:"Radtke"
+//          // newLabel.removeEventListener('mouseover',eventMouseOver);
+//     });
+//    newDiv.addEventListener('mouseover',eventMouseOver);
+//    newDiv.appendChild(newLabel);
 // }
-// ];
-// const myJsonObj =  {
-//     firstName:"Flavio",
-//     lastName:"Sampaio"
-// };
-// let index=0;
-// const rev=myJsonObjArr.reverse();
-// // result.innerHTML = rev[index].firstName
-// // result.innerHTML +=" "
 
-// // result.innerHTML += rev[index].lastName
-// const otherJson={
-// "employees":[
-//     {"firstName":"John", "lastName":"Doe"},
-//     {"firstName":"Anna", "lastName":"Smith"},
-//     {"firstName":"Peter", "lastName":"Jones"}
-// ],
-// "employeeOfTheMonth":{"firstName":"John", "lastName":"Doe"}
-// }
-// console.log(  otherJson );
-// console.log( JSON.stringify(otherJson));
-// result.innerHTML +=   JSON.stringify(otherJson);
+// const newDiv = document.createElement("div");
+// newDiv.style["background-color"] = "green";
+// newDiv.style["color"] = "white";
+// document.body.appendChild(newDiv);
 
-// console.log( JSON.parse(result.innerHTML));
 
-fetch
-let index=2;
-(async () => {
-    // GET request using fetch with async/await
+// const newButton = document.createElement("button");
+// newButton.innerText = "Click me";
+// newButton.addEventListener('click',newButtonClick)
+// myDivObj.appendChild(newButton);
+
+// function eventMouseOver() {
+//     this.style["background-color"] = "red";
+//     this.style["color"] = "white";
+// }newButton
+
+async function getApi(url){
     const response = await fetch('https://reqres.in/api/users');
     const responseData = await response.json();
     console.log("responseData",responseData);
-     console.log("response",response);
-     console.log("typeof response = ",typeof response);
-     console.log("JSON.stringify()",JSON.stringify(responseData.data[index]));
-//    // console.log("JSON.parse()",JSON.parse( '{"name":"Flavio"}'));
-     result.innerHTML = `${responseData.data[index].first_name} ${responseData.data[0].last_name} <br>`;
-    // result.innerHTML +=   JSON.stringify(responseData.data[index])+"<br>";
- //    result.innerHTML +=    responseData.data[0] +"<br>";
-//    // result.innerHTML +=   JSON.parse( '{"name":"Flavio"}').name;
-      let avatar= document.getElementById("image");
-     avatar.src=responseData.data[index].avatar;
+}
+const newButton = document.createElement("button");
+newButton.style["type"] = "text";
+newButton.innerText = "Click me";
+newButton.addEventListener('click',getApi)
 
-})();
