@@ -1,169 +1,154 @@
-// DAY 03
+let result= document.getElementById("myDiv");
+
+//  let isCorrect = confirm("Is it correct?");
+//  result.innerHTML= `isCorrect = ${isCorrect}<br/>`;
+
+//  if(isCorrect){
+//    result.innerHTML+= "that is correct!!!";
+//  }
+//  else{
+//     result.innerHTML+= "that is NOT correct!!!";
+//  }
+
+//  let myResponse = prompt("1+1?");
+//  result.innerHTML= `1+1=${1+1}?  ${myResponse} <br/>`;
+// result.innerHTML+= `myResponse type is  ${typeof myResponse }<br/>`;
+
+//  if(+myResponse ===  (1+1) ){
+//    result.innerHTML+= "that is correct!!!";
+//  }
+//  else{
+//     result.innerHTML+= "that is NOT correct!!!";
+//  }
+
+//  result.innerHTML += `<p>Truthy and Falsy</p>`;
+//   result.innerHTML += `<p>Falsy = <br>
+//   - False,<br>
+//   - 0,<br>
+//   - Empty string (""),<br>
+//   - Null,<br>
+//   - Undefined,<br>
+//   - NaN</p>`;
+
+// let myVar = "3";
+// let somethingElse= 3;
+//  if( myVar=== somethingElse ){
+//    result.innerHTML+= "that is true!!!";
+//  }
+//  else{
+//     result.innerHTML+= "that is false!!!";
+//  }
 
 
-// // An String
-// let myString = "Hello World";
-// console.log("myString            = ", myString);
-// console.log("length              = ", myString.length);
-// console.log("includes('orl')     = ", myString.includes('orl'));
-// console.log("includes('@')     = ", myString.includes('@'));
-// console.log("myString[0]         = ", myString[0]);
-// console.log("myString[11]         = ", myString[myString.length-1]);
-// console.log("indexOf('World')    = ", myString.indexOf('World'));
-// console.log("indexOf('o')    = ", myString.indexOf('o'));
-// console.log("indexOf('o')    = ", myString.indexOf('o',myString.indexOf('o')+1));
-// console.log("slice(3,7)          = ", myString.slice(3,7));
-// console.log("startsWith('Hello') = ", myString.startsWith('Hello'));
-// console.log("endsWith('Hello')   = ", myString.endsWith('Hello'));
+// result.innerHTML += `<p>null = ${(null?"true":"false")} </p>`;
+// result.innerHTML += `<p>0 = ${(0?"true":"false")} </p>`;
+// result.innerHTML += `<p>"" = ${(""?"true":"false")} </p>`;
+// result.innerHTML += `<p>Undefined = ${(undefined?"true":"false")} </p>`;
+// result.innerHTML += `<p>NaN = ${(NaN?"true":"false")} </p>`;
 
-// Split an String
-// let message = "id,phoneNumber,firstName,lastName,address1,address2,state,zip";
-// let message = "    Hello World   ";
-// console.log(message);
-// let newStringArray = message.split('');
-// console.log(newStringArray );
-// let reversedStringArray = newStringArray.reverse();
-// console.log(reversedStringArray );
-// let reversedString = reversedStringArray.join('');
-// console.log('|'+reversedString+"|")
-// console.log(reversedString.toUpperCase());
-// console.log(reversedString.toLowerCase());
-// console.log("|"+message.trimEnd()+"|");
-// console.log("|"+message.trimStart()+"|");
-// console.log("|"+message.trim()+"|");
+// result.innerHTML += `<p>Truthy = All other values</p>`;
+// result.innerHTML += `<p>" " = ${(" "?"true":"false")} </p>`;
+// result.innerHTML += `<p>"0" = ${("0"?"true":"false")} </p>`;
+
+// result.innerHTML += `<p>Logical Operators</p>`;
+//   result.innerHTML += `<p>
+//   - &&  = and <br>
+//   - ||  = or<br>
+//   - !   = not</p>`;
+// "not false" is equal to "true"
+//  result.innerHTML += `<p>Comparison Operator</p>`;
+//  result.innerHTML += `<p>=== strict equal</p>`;
+//  result.innerHTML += `<p>1===1 = ${1===1} ---- 2===1 = ${2===1}</p>`;
+//  result.innerHTML += `<hr />`;
+//  result.innerHTML += `<p>!== strict not equal</p>`;
+//  result.innerHTML += `<p>1!==1 = ${1!==1} ---- 2!==1 = ${2!==1}</p>`;
+//  result.innerHTML += `<hr />`;
+//  result.innerHTML += `<p>> greater than</p>`;
+//  result.innerHTML += `<p>1>1 = ${1>1} ---- 1>0 = ${1>0}</p>`;
+//  result.innerHTML += `<hr />`;
+//  result.innerHTML += `<p> >= greater than or equal</p>`;
+//  result.innerHTML += `<p>1>=1 = ${1>=1} ---- 0>=1 = ${0>=1}</p>`;
+//  result.innerHTML += `<hr />`;
+//  result.innerHTML += `<p> < less than</p>`;
+//  result.innerHTML += `<p>0<1 = ${0<1} ---- 1<0 = ${1<0}</p>`;
+//  result.innerHTML += `<hr />`;
+//  result.innerHTML += `<p> <= less than or equal</p>`;
+//  result.innerHTML += `<p>1<=1 = ${1>=1} ---- 1<=0 = ${1<=0}</p>`;
+
+// result.innerHTML += `<p>1<=1 && 0<=1 = ${1>=1 && 0<=1} </p>`;
 
 
-// alert only shows a message
+// let a="Flavio";
 
-//console.log('Print this');
-//alert("Show a message");
 
-// prompt Takes an input from the user
-// const userName = prompt("Enter your name");
-// const howUserIsDoing = confirm(`Hello, ${userName}! How are you today?`);
-// console.log('howUserIsDoing =',howUserIsDoing);
-// const constantVariable= 10;
-// constantVariable=11;
-
-// const enteredNumber = prompt("Enter a number",10);
-// console.log(  parseInt(enteredNumber));
-
-// const constantVariable=10;
-// console.log(constantVariable);
-// {
-//   let constantVariable = 11;
+// switch (a) {
+//     case "1096":
+//     case "1095":
+//         result.innerHTML +="<p>form 1095</p>" ;
+//         break;
+//     case "1099":
+//         result.innerHTML +="<p>form 1099</p>" ;
+//         break
+//     default:
+//         result.innerHTML +=`<p>form w2</p>`;
 // }
-// console.log(constantVariable);
 
-// const constantObject={
-//     firstName:"Flavio",
-//     LastName:"Sampaio",
-//     id:10
-// };
-// console.log(constantObject);
-
-// constantObject.firstName="Luis"
-// console.log(constantObject);
-
-
-// // CHALLENGE 1
-// // Prompt the user for their first name
-// // Store their input to a variable
-// let userFirstName = prompt("Please enter your first name");
-// // Reverse your user’s name
-// // Convert to an array
-// let nameArray = userFirstName.split('');
-// // reverse the array
-// let reversedArray = nameArray.reverse();
-// // Join array
-// let reversedUserName = reversedArray.join('');
-// // alert the reversed string
-// alert(reversedUserName);
-
-// // Challenge 2
-// // Prompt for a number value (provide a default of 10)
-// const num1 = prompt("Enter a number", 10); // second value 10 adds a default for the input
-// // Prompt for a second number value (provide a default of 10)
-// const num2 = prompt("Enter another number", 10);
-
-// // Convert the prompted values into integers using parseInt()
-// const addedValues = parseInt(num1) + parseInt(num2);
-// // Add the numbers together and alert the user with the result
-// alert(addedValues);
+//  if( a==="1095" || a==="1096" ){
+//      result.innerHTML +="<p>form 1095</p>" ;
+//  }
+//  else if( a==="1099" ){
+//      result.innerHTML +="<p>form 1099</p>" ;
+//  }
+//  else{
+//       result.innerHTML +=`<p>form w2</p>`;
+//  }
 
 
-// Math
-// let stringNum= "10";
-// let num=parseInt(stringNum);
-// alert(num);
+// Ternary Operator:  expression ? true : false;
+// let a="w2";
+// result.innerHTML += `<p>form  ${ (a==="w2" ? "w2" : "not valid") } </p>`;
+// let b= (a==="w2" ? 2 : 0);
+// result.innerHTML += `<p>form  ${ b } </p>`;
+// result.innerHTML += `<p>b=  ${ ++b } </p>`;
 
-
-// let doMathE = Math.E;
-
-// console.log( "doMathE  ",doMathE   );
-
-// let doMathLN2 = Math.LN2;
-// console.log( "doMathLN2",doMathLN2 );
-// let doMathPI = Math.PI;
-// console.log( "doMathPI ",doMathPI  );
-
-// console.log( "Math ",Math.trunc(5.53454)  );
-// console.log( "Math round up ",Math.round(5.53454)  );
-// console.log( "Math round down",Math.round(5.43454)  );
-
-// console.log( "Math ",Math.min(1,4,3,-1,20,5)  );
-
-// console.log( "Math ",Math.max(1,4,3,-1,20,5)  );
-
-// console.log( "Math.random() ",Math.random()  );
-// console.log( "Math.random() ",Math.random()  );
-// console.log( "Math.random() ",Math.random()  );
-// console.log( "Math.random() ",Math.random()  );
-
-// let randomNumber=Math.random();
-// console.log( "Math.random() ",randomNumber, Math.trunc(randomNumber*6 ) );
-// console.log( "Math.random() ",Math.trunc(Math.random()*6 ) );
-// console.log( "Math.random() ",Math.trunc(Math.random()*6 ) );
-// console.log( "Math.random() ",Math.round(Math.random()*6 ) );
-
-// Date
-// const dateString = Date().toString() ;
-// // console.log( "dateString ",dateString  );
-
-// const dateVariable = new Date();
-
-// console.log( "day of the week ",dateVariable.getDay()  );
-
-// console.log( "day ",dateVariable.getDate()  );
-// console.log( "month ",dateVariable.getMonth()  );
-// console.log( "year ",dateVariable.getFullYear()  );
-// console.log( "Now ",Date.now());
-// debugger
-// console.log( "Now ",Date.now());
+result.innerHTML += `<h2>Daily challenge solution</h2>`;
 
 
 
-// Depending on timezone, your results will vary
-// const events = new Date('19 Aug 1975 18:00:00 GMT+00:00');
-const events = new Date( Date().toString());
-// const events = Date( );
+try{
+      const num1 = prompt("Enter a number", 100);
+      result.innerHTML += `<p>num1 = ${num1}</p>`;
+      console.log("num1",num1, typeof num1);
+     let parsedNum1 = +num1; // parseInt(num1); // +num1;
+    console.log("parsedNum1",parsedNum1, typeof parsedNum1);
+    if(isNaN(parsedNum1)){
+        throw " Num1 is not a number ";
+    }
+    const num2 = prompt("Enter another number", 200);
+    result.innerHTML += `<p>num2 = ${num2}</p>`;
+    let parsedNum2 = parseInt(num2); // +num2;
+    console.log("num2",num2, typeof num2) ;
+    console.log("parsedNum2",parsedNum2, typeof parsedNum2);
+    if(isNaN(parsedNum2)){
+      throw " Num2 is not a number ";
+    }
+    let num3=+parsedNum1/+parsedNum2;
+   console.log("parsedNum1/+parsedNum2 = ",parsedNum1/+parsedNum2);
+   console.log("num3",num3, typeof num3);
+     if(parsedNum1=parsedNum2) {
+       result.innerHTML += "<p>num1 is greater than num2</p>";
+    }
+    else if (parsedNum1<parsedNum2){
+        result.innerHTML += "<p>num2 is greater than num1</p>";
+    }
+    else{
+        result.innerHTML += "<p>num1 and num2 are equal</p>";
+    }
+}
+catch(err){
+     result.innerHTML +=`<p>Error: ${err}</p>` ;
+}
+// if(parsedNum1===parsedNum2 || parsedNum1!==parsedNum2 || parsedNum1!==parsedNum2) { }
+// if(parsedNum1===parsedNum2 && parsedNum1!==parsedNum2 && parsedNum1!==parsedNum2) { }
 
-// console.log(events.toLocaleTimeString('it-IT'));
 
-// console.log(events.toLocaleTimeString('en-US'));
-
-// console.log(events.toLocaleTimeString('ar-EG'));
-// console.log(events.getTime());
-// console.log( "year before ",events.getFullYear());
-// events.setFullYear(2021)
-// console.log( "year after",events.getFullYear());
-console.log(events.toString());
-console.log(events.toLocaleTimeString('en-US'));
-
-
-
-let num1 = prompt();
-let num2 = prompt();
-let result =`${num1} + ${num2}`
-
-alert(parseInt(result))
