@@ -9,10 +9,47 @@
 
 <body>
     <h1>Day 7</h1>
-    <div id="myDiv" class="test"></div>
-    <!-- <button onclick="newButtonClick()">Click this</button> -->
-    <!-- <input type="text">
-    <input type="email"> -->
+    <div class="card-footer">
+                <div>
+                    <form name="contactForm" onsubmit="return submitData(event)">
+                      <label for="fname">First Name:</label>
+                      <input type="text" id="fname" name="firstName" placeholder="Your first name...">
+                      
+                      <br>
+                      
+                      <label for="lname">Last Name:</label>
+                      <input type="text" id="lname" name="lastName" placeholder="Your last name...">
+                      
+                      <br>
+                      
+                      <label for="country">Country:</label>
+                      <select id="country" name="country">
+                        <option value="Morocco">Morocco</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Canada">Canada</option>
+                        <option value="USA">USA</option>
+                      </select>
+                      
+                      <br>
+                      
+                      <label for="subject">Subject:</label>
+                      <textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
+                      
+                      <br>
+                      
+                      <input type="submit" value="Submit">
+                    </form>
+                  <div>
+                    
+                    <div>
+                      <h1>Submitted data:</h1>
+                      <ul id="data">
+                        
+                      </ul>
+                    </div>
+              </div>
+            </div>
+          </div>
     <script src="script.js"></script>
 </body>
 
